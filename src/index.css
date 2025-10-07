@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Dark mode fixes */
+.dark {
+  color-scheme: dark;
+}
+
+.dark .text-black {
+  color: rgb(243 244 246) !important;
+}
+
+.dark .text-gray-900 {
+  color: rgb(243 244 246) !important;
+}
+
+.dark .text-gray-800 {
+  color: rgb(229 231 235) !important;
+}
+
+.dark .bg-white {
+  background-color: rgb(31 41 55) !important;
+}
+
+.dark input, .dark select, .dark textarea {
+  background-color: rgb(31 41 55) !important;
+  color: rgb(243 244 246) !important;
+  border-color: rgb(75 85 99) !important;
+}
+
+.dark input::placeholder {
+  color: rgb(156 163 175) !important;
+}
