@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  prashikshan-app:
+    build: .
+    ports:
+      - "3000:80"
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
+    container_name: prashikshan-internship-platform
+
+  # Optional: Add a development service
+  prashikshan-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "5173:5173"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+    profiles:
+      - dev
+    container_name: prashikshan-dev
